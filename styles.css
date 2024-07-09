@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: var(--background-body,#fff);
+    color: var(--color-body,#000);
     margin: 0;
     padding: 0;
   }
@@ -14,7 +14,7 @@ body {
     max-width: 800px;
     margin: 0px auto;
     padding: 20px;
-    background: #f7f4f4;
+    background: var(--background-container,#fff);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
@@ -66,3 +66,15 @@ body {
       font-size: large;
     }
   }
+
+[data-tema='dark']{
+  --background-body:#202020;
+  --background-container: #2b2a2a;
+  --color-body:#fcf9f9;
+}
+
+[data-tema='light'] {
+  --background-body: #afacac;
+  --background-container: #dfdbdb;
+  --color-body: #292828;
+}
